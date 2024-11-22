@@ -1,30 +1,30 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import NavBar from "./components/NavBar"
-import Home from "./components/Home"
-import NotFound from "./components/NotFound"
-import Generos from "./components/Generos"
-import Perfil from "./components/Perfil"
-import LibrosFiltrados from "./components/LibrosFiltrados"
-import Libro from "./components/Libro"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from "./components/shared/NavBar";
+import Catalog from "./components/pages/Catalog";
+import NotFound from "./components/pages/NotFound";
+import Genres from "./components/Genres";
+import Book from "./components/Book";
+import Profile from "./components/pages/Profile";
+import { createClient } from "@supabase/supabase-js";
 
-function App() {
+export const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_KEY,
+);
+
+export function App() {
   return (
-    <div>
-      <BrowserRouter>
-      <NavBar/>
-      <div className="app-container">
+    <BrowserRouter>
+      <NavBar />
+      <main>
         <Routes>
-          <Route path="/catalogo" element={<Home/>}></Route>
-          <Route exact path="/catalogo/:genero" element={<LibrosFiltrados/>}></Route>
-          <Route path="/libro/:idLibro" element={<Libro/>}></Route>
-          <Route path="/generos" element={<Generos/>}></Route>
-          <Route path="/MiPerfil" element={<Perfil/>}></Route>
-          <Route path="*" element={<NotFound/>}></Route>
+          <Route path="/catalogo" element={<Catalog />}></Route>
+          <Route path="/libros/:bookId" element={<Book />}></Route>
+          <Route path="/generos" element={<Genres />}></Route>
+          <Route path="/perfil" element={<Profile />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
-      </div>
-      </BrowserRouter>
-    </div>
-  )
+      </main>
+    </BrowserRouter>
+  );
 }
-
-export default App

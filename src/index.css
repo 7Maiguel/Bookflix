@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-[Raleway];
+  }
+
+  body {
+    @apply bg-[#141414] text-[#f1f1f1];
+  }
+
+  main {
+    @apply mx-auto h-[100vh] w-[92%] pt-[5.5rem];
+  }
+}
+
+@layer components {
+  .logo {
+    @apply font-[Anton] text-2xl tracking-wider text-[#E50914];
+  }
+
+  .title {
+    @apply mb-6 text-3xl font-semibold;
+  }
+
+  .primary-btn {
+    @apply rounded bg-[#E50914] px-10 py-4 text-xl font-semibold text-white duration-150 hover:bg-[#bb2a2a];
+  }
+}
+
+@layer utilities {
+  .img-motion {
+    @apply object-cover object-[47%] duration-700 hover:object-center;
+  }
+}
