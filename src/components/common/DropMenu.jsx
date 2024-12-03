@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CustomIcon from "./CustomIcon";
 
 export default function DropMenu({ items, handleItemClick }) {
   return (
@@ -10,12 +11,7 @@ export default function DropMenu({ items, handleItemClick }) {
           className="flex cursor-pointer items-center px-3 py-2 hover:bg-[#141414]"
           onClick={handleItemClick}
         >
-          <span
-            className="material-symbols-outlined mr-2 text-xl"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            {item[1]}
-          </span>
+          <CustomIcon styles="mr-2" type={item[1]} isFilled={true} />
           {item[0]}
         </Link>
       ))}

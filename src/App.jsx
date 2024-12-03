@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "./components/shared/NavBar";
+import NavBar from "./components/common/NavBar";
 import Catalog from "./components/pages/Catalog";
 import NotFound from "./components/pages/NotFound";
 import Genres from "./components/Genres";

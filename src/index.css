@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply font-[Raleway];
+    @apply font-[Montserrat];
   }
 
   body {
@@ -13,6 +13,10 @@
 
   main {
     @apply mx-auto h-[100vh] w-[92%] pt-[5.5rem];
+  }
+
+  input {
+    @apply w-full border-b-[1px] bg-zinc-900 p-1 font-sans text-xl outline-none;
   }
 }
 
@@ -26,12 +30,38 @@
   }
 
   .primary-btn {
-    @apply rounded bg-[#E50914] px-10 py-4 text-xl font-semibold text-white duration-150 hover:bg-[#bb2a2a];
+    @apply f-center rounded bg-[#E50914] px-4 py-2 text-lg font-semibold text-[#f1f1f1] duration-150 hover:bg-[#be2c2c];
+  }
+
+  .secondary-btn {
+    @apply f-center rounded bg-[#f1f1f1] px-4 py-2 text-lg font-semibold text-[#141414] duration-150 hover:bg-[#e1e1e1];
+  }
+
+  .loader {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+    to {
+      transform: rotate(1turn);
+    }
   }
 }
 
 @layer utilities {
   .img-motion {
     @apply object-cover object-[47%] duration-700 hover:object-center;
+  }
+
+  .f-center {
+    @apply inline-flex items-center justify-center;
   }
 }

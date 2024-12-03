@@ -8,7 +8,7 @@ export default function NotFound() {
         No encontramos esta página. Encontrarás muchos libros para explorar en
         nuestro catáloogo.
       </p>
-      <Link to="/catalogo" className="primary-btn">
+      <Link to="/catalogo" className="primary-btn px-10 py-4">
         Volver al inicio
       </Link>
     </div>

@@ -47,7 +47,7 @@ export default function NavBar() {
             showDropMenu([
               ["Perfil", "person"],
               ["Guardados", "bookmark"],
-              ["Ayuda", "info"]
+              ["Ayuda", "info"],
             ]);
           }}
         >
