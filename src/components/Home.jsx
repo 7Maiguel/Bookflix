@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "../App";
+import BookCard from "./books/BookCard";
 
 export default function Home() {
   const [bookList, setbookList] = useState([]);
@@ -14,21 +15,13 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <h2>Nuestra selección para ti</h2>
-      <div className="books-container">
-        {bookList.map((book) => {
-          return (
-            <Link
-              className="book-card"
-              key={book.id}
-              to={`/libros/${book.id}`}
-            >
-              <img src={book.cover} alt={book.title} />
-            </Link>
-          );
-        })}
+    <>
+      <h2 className="mb-6">Nuestra selección para ti</h2>
+      <div className="w-full">
+        {bookList.map((book) => (
+          <BookCard key={book.id} bookId={book.id} cover={book.cover} />
+        ))}
       </div>
-    </div>
+    </>
   );
 }

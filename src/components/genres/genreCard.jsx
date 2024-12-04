@@ -1,5 +1,4 @@
 import { useState } from "react";
-import FavoriteIcon from "../shared/icons/FavoriteIcon";
 
 export default function GenreCard({ title, coverURL }) {
   const [mouseOver, setMouseOver] = useState(false);
