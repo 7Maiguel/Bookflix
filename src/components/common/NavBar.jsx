@@ -13,18 +13,18 @@ export default function NavBar() {
 
   return (
     <header className="fixed top-0 z-10 m-auto flex w-full items-center justify-between bg-[#060606] py-3 pl-16 pr-14">
-      <Link to="/catalogo" className="logo">
+      <Link to="/" className="logo">
         BOOKFLIX
       </Link>
       <ul className="flex w-[18%] items-center justify-between">
         <li>
           <Link
             className={
-              useLocation().pathname == "/catalogo"
+              useLocation().pathname == "/"
                 ? "text-lg font-semibold"
                 : "text-lg"
             }
-            to="/catalogo"
+            to="/"
           >
             Libros
           </Link>

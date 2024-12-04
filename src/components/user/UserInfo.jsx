@@ -3,6 +3,7 @@ import { censorString, joinName } from "../../utils/strings";
 
 export default function UserInfo({ userData, activeEditingMode }) {
   const [censoringData, setCensoringData] = useState(true);
+  const booksSaved = JSON.parse(localStorage.getItem("favorite_books"));
 
   return (
     <>
@@ -36,6 +37,11 @@ export default function UserInfo({ userData, activeEditingMode }) {
         <b>Fecha de Nacimiento</b>
         <br />
         <span className="text-xl">{userData.birthdate}</span>
+        <br />
+        <br />
+        <b>Libros guardados</b>
+        <br />
+        {booksSaved.length}
         <br />
         <br />
         <button className="primary-btn" onClick={activeEditingMode}>

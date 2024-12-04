@@ -6,6 +6,7 @@ import Genres from "./components/Genres";
 import Book from "./components/Book";
 import Profile from "./components/pages/Profile";
 import { createClient } from "@supabase/supabase-js";
+import Home from "./components/Home";
 
 export const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -18,7 +19,7 @@ export function App() {
       <NavBar />
       <main>
         <Routes>
-          <Route path="/catalogo" element={<Catalog />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/libros/:bookId" element={<Book />}></Route>
           <Route path="/generos" element={<Genres />}></Route>
           <Route path="/perfil" element={<Profile />}></Route>
