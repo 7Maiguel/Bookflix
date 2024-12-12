@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Sci-fi",
+    "picture": "https://cdn1.epicgames.com/ue/product/Featured/PolarSciFiFacility_featured-894x488-a7e742229aacac5d74958f11d297c9bb.png"
+  },
+  {
+    "id": 2,
+    "name": "Terror",
+    "picture": "https://media.istockphoto.com/id/1358923414/es/v%C3%ADdeo/sala-oscura-de-la-habitaci%C3%B3n-en-el-motel.jpg?s=640x640&k=20&c=MGcuust6DvT3HH2oWvFXvWVHB5EQEhwYpPXk30uXUn4="
+  },
+  {
+    "id": 3,
+    "name": "Acción",
+    "picture": "https://preview.redd.it/who-in-this-sub-considers-the-wick-series-the-best-action-v0-s8mx3thw9v7b1.jpg?width=1080&crop=smart&auto=webp&s=3c76a06dd55a7d483ffd341e1be18806de5587eb"
+  },
+  {
+    "id": 4,
+    "name": "Misterio",
+    "picture": "https://i1.sndcdn.com/artworks-iEhA4ysoRk2xBZyd-FmLajw-t500x500.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Fantasía",
+    "picture": "https://www.publicdomainpictures.net/pictures/540000/nahled/fantasy-sky-background-1696095780InQ.jpg"
+  }
+]

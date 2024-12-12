@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "title": "1984",
+    "description": "Novela de ciencia ficción de George Orwell que se desarrolla en una sociedad totalitaria futura.",
+    "cover": "https://i.pinimg.com/736x/e5/f8/21/e5f82111504d28779262bf2dca0fad56.jpg",
+    "genres": ["Ciencia Ficción", "Distópico"]
+  },
+  {
+    "id": 2,
+    "title": "The Catcher in the Rye",
+    "description": "La novela más famosa de J.D. Salinger, que sigue la historia de Holden Caulfield, un joven que se siente perdido en el mundo.",
+    "cover": "https://m.media-amazon.com/images/I/91fQEUwFMyL._AC_UF1000,1000_QL80_.jpg",
+    "genres": ["Novela de Coming-of-age", "Literatura clásica"]
+  },
+  {
+    "id": 3,
+    "title": "The Great Gatsby",
+    "description": "La novela más famosa de F. Scott Fitzgerald, que sigue la historia de Jay Gatsby, un hombre rico y misterioso que vive en Long Island.",
+    "cover": "https://i0.wp.com/americanwritersmuseum.org/wp-content/uploads/2018/02/CK-3.jpg?resize=267%2C400&ssl=1",
+    "genres": ["Novela de Coming-of-age", "Literatura clásica"]
+  },
+  {
+    "id": 4,
+    "title": "To Kill a Mockingbird",
+    "description": "La novela más famosa de Harper Lee, que sigue la historia de Scout Finch, una niña que crece en una pequeña ciudad del sur de EE. UU. en los años 30.",
+    "cover": "https://m.media-amazon.com/images/I/51lVvSDLQJL._AC_UF1000,1000_QL80_.jpg",
+    "genres": ["Novela de Coming-of-age", "Literatura clásica"]
+  },
+  {
+    "id": 5,
+    "title": "The Lord of the Rings",
+    "description": "La trilogía de J.R.R. Tolkien, que sigue la historia de un hobbit llamado Frodo y su misión para destruir el anillo de poder.",
+    "cover": "https://m.media-amazon.com/images/I/913sMwNHsBL._AC_UF1000,1000_QL80_.jpg",
+    "genres": ["Fantasía", "Aventuras"]
+  },
+  {
+    "id": 6,
+    "title": "Pride and Prejudice",
+    "description": "La novela más famosa de Jane Austen, que sigue la historia de las hermanas Bennet y su búsqueda de amor y felicidad en la Inglaterra del siglo XIX.",
+    "cover": "https://m.media-amazon.com/images/I/812wzoJvRLL._AC_UF1000,1000_QL80_.jpg",
+    "genres": ["Romance", "Literatura clásica"]
+  },
+  {
+    "id": 7,
+    "title": "The Hobbit",
+    "description": "La novela de J.R.R. Tolkien, que sigue la historia de un hobbit llamado Bilbo y su viaje con enanos y un mago para recuperar el tesoro de Smaug.",
+    "cover": "https://bookbub-res.cloudinary.com/image/upload/f_auto,q_auto/v1584109358/blog/the-hobbit-book-cover-art-Paperback-2012.jpg",
+    "genres": ["Fantasía", "Aventuras"]
+  },
+  {
+    "id": 8,
+    "title": "The Nightingale",
+    "description": "La novela de Kristin Hannah, que sigue la historia de dos hermanas francesas durante la Segunda Guerra Mundial.",
+    "cover": "https://images.cdn3.buscalibre.com/fit-in/360x360/ee/d5/eed58309eb62a5001909369793ec28ff.jpg",
+    "genres": ["Historia", "Romance"]
+  },
+  {
+    "id": 9,
+    "title": "The Little Prince",
+    "description": "La novela de Antoine de Saint-Exupéry, que sigue la historia de un príncipe extraterrestre que viaja a la Tierra en busca de amistad y amor.",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQtLtU2CyvEZ61hi-t2rqaNKZhrIT06BtZIw&s",
+    "genres": ["Literatura infantil", "Ciencia ficción"]
+  },
+  {
+    "id": 10,
+    "title": "The Picture of Dorian Gray",
+    "description": "La novela de Oscar Wilde, que sigue la historia de un joven llamado Dorian Gray que vende su alma al diablo para mantener su juventud y belleza.",
+    "cover": "https://m.media-amazon.com/images/I/91uns-1GnQL._AC_UF1000,1000_QL80_.jpg",
+    "genres": ["Literatura clásica", "Fantasía"]
+  },
+  {
+    "id": 11,
+    "title": "IT",
+    "description": "",
+    "genres": ["Terror"],
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/1/1a/It_%281986%29_front_cover%2C_first_edition.jpg"
+  }
+]
