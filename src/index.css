@@ -11,12 +11,8 @@
     @apply bg-[#141414] text-[#f1f1f1];
   }
 
-  main {
-    @apply mx-auto h-[100vh] w-[92%] pt-[5.5rem];
-  }
-
   input {
-    @apply w-full border-b-[1px] bg-zinc-900 p-1 font-sans text-xl outline-none;
+    @apply mb-4 w-full border-b-2 p-3 font-sans text-xl outline-none focus:border-b-red-400;
   }
 }
 
@@ -25,16 +21,20 @@
     @apply font-[Anton] text-2xl tracking-wider text-[#E50914];
   }
 
+  .page-container {
+    @apply mx-auto h-[100vh] w-[91%];
+  }
+
   .title {
     @apply mb-6 text-3xl font-semibold;
   }
 
   .primary-btn {
-    @apply f-center rounded bg-[#E50914] px-4 py-2 text-lg font-semibold text-[#f1f1f1] duration-150 hover:bg-[#be2c2c];
+    @apply rounded bg-[#E50914] px-4 py-3 text-lg font-semibold text-[#f1f1f1] duration-150 hover:bg-[#be2c2c];
   }
 
   .secondary-btn {
-    @apply f-center rounded bg-[#f1f1f1] px-4 py-2 text-lg font-semibold text-[#141414] duration-150 hover:bg-[#e1e1e1];
+    @apply rounded bg-[#f1f1f1] px-4 py-3 text-lg font-semibold text-[#141414] duration-150 hover:bg-[#e1e1e1];
   }
 
   .loader {
