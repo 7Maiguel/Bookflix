@@ -1,13 +1,5 @@
-import { supabase } from "../../App";
 
 export default function UserForm({ userData, cancelEditingMode }) {
-  const updateUser = () => {
-    supabase
-      .from("users")
-      .update(userData)
-      .eq("id", localStorage.getItem("user_id"));
-  };
-
   return (
     <>
       <img

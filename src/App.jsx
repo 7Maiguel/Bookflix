@@ -1,31 +1,21 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "./components/common/NavBar";
-import Catalog from "./components/pages/Catalog";
-import NotFound from "./components/pages/NotFound";
-import Genres from "./components/Genres";
-import Book from "./components/Book";
-import Profile from "./components/pages/Profile";
-import { createClient } from "@supabase/supabase-js";
-import Home from "./components/Home";
 
-export const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_KEY,
-);
+import NavBar from "./components/common/NavBar";
+import NotFound from "./pages/NotFound";
+import Genres from "./pages/Genres";
+import Profile from "./pages/Profile";
+import Home from "./pages/Home";
 
 export function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/libros/:bookId" element={<Book />}></Route>
-          <Route path="/generos" element={<Genres />}></Route>
-          <Route path="/perfil" element={<Profile />}></Route>
-          <Route path="*" element={<NotFound />}></Route>
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/generos" element={<Genres />}></Route>
+        <Route path="/perfil" element={<Profile />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
