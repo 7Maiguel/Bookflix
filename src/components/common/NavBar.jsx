@@ -16,7 +16,7 @@ export default function NavBar() {
       <Link to="/" className="logo">
         BOOKFLIX
       </Link>
-      <ul className="flex w-[18%] items-center justify-between">
+      <ul className="flex w-[20%] items-center justify-between">
         <li>
           <Link
             className={
@@ -45,9 +45,9 @@ export default function NavBar() {
           className="flex cursor-pointer items-center justify-center"
           onClick={() => {
             showDropMenu([
-              ["Perfil", "person"],
-              ["Guardados", "bookmark"],
-              ["Ayuda", "info"],
+              ["Perfil", "personFilled"],
+              ["Guardados", "bookmarkFilled"],
+              ["Cerrar sesión", "logoutFilled"],
             ]);
           }}
         >
