@@ -10,8 +10,8 @@ const LogIn = () => {
   };
 
   return (
-    <div className="relative flex w-[40%] flex-col rounded bg-gray-200 px-6 pb-7 pt-5 text-black">
-      <h1 className="text-3xl font-semibold">Iniciar sesión</h1>
+    <div className="relative flex w-[35%] flex-col rounded bg-gray-200 px-6 pb-7 pt-5 text-black">
+      <h1 className="text-3xl font-semibold">Inicio de sesión</h1>
 
       <form className="my-4" onSubmit={handleSubmit}>
         <input type="text" name="email" placeholder="Email" />

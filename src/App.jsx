@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound";
 import Genres from "./pages/Genres";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 export function App() {
   return (
@@ -14,6 +15,7 @@ export function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/generos" element={<Genres />}></Route>
         <Route path="/perfil" element={<Profile />}></Route>
+        <Route path="/login" element={<Login />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

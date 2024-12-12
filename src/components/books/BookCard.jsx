@@ -26,11 +26,14 @@ export default function BookCard({ bookId, cover }) {
 
   return (
     <div
-      className="relative w-[170px] cursor-pointer"
+      className="relative h-[260px] w-[170px] cursor-pointer"
       onMouseEnter={toggleMouseFocus}
       onMouseLeave={toggleMouseFocus}
     >
-      <img src={cover} className={mouseFocus ? "opacity-85" : ""} />
+      <img
+        src={cover}
+        className={`h-full w-full duration-100 ${mouseFocus ? "opacity-85" : ""}`}
+      />
       {mouseFocus && (
         <CustomIcon
           type="favorite"
