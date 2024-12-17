@@ -1,11 +1,16 @@
+import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../contexts";
 import CustomIcon from "../common/CustomIcon";
 
 export default function DropMenu({ setDropMenuActive }) {
+  const { setIsUserLoggedIn } = useContext(GlobalContext);
   const navigate = useNavigate();
+
   const signOut = () => {
+    localStorage.setItem("logged_in", JSON.stringify(false));
     setDropMenuActive(false);
-    localStorage.setItem("logged_in", JSON.stringify("false"));
+    setIsUserLoggedIn(false);
     navigate("/login");
   };
 
