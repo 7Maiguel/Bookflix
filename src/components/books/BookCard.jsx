@@ -4,15 +4,11 @@ import useLocalStorage from "../../hooks/localstorage";
 
 export default function BookCard({ bookId, cover }) {
   const [mouseFocus, setMouseFocus] = useState(false);
-  const [bookSaved, setBookSaved] = useState(false);
   const [favoriteBooks, setFavoriteBooks] = useLocalStorage(
     "favorite_books",
     [],
   );
-
-  useEffect(() => {
-    setBookSaved(favoriteBooks.includes(bookId));
-  }, []);
+  const [bookSaved, setBookSaved] = useState(favoriteBooks.includes(bookId));
 
   const toggleMouseFocus = () => setMouseFocus(!mouseFocus);
 
@@ -36,9 +32,8 @@ export default function BookCard({ bookId, cover }) {
       />
       {mouseFocus && (
         <CustomIcon
-          type="favorite"
+          type={bookSaved ? "favoriteFilled" : "favorite"}
           styles="text-3xl absolute top-2 right-2"
-          isFilled={bookSaved}
           handleClick={toggleLikeBook}
         />
       )}

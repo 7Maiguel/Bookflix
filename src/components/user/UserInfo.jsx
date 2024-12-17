@@ -3,13 +3,12 @@ import { censorString, joinName } from "../../utils/strings";
 
 export default function UserInfo({ userData, activeEditingMode }) {
   const [censoringData, setCensoringData] = useState(true);
-  const booksSaved = JSON.parse(localStorage.getItem("favorite_books"));
 
   return (
     <>
       <img
         className="mr-6 h-full w-[280px] rounded border-2 border-white object-cover"
-        src={userData.picture}
+        src="https://avatarfiles.alphacoders.com/203/thumb-1920-203661.jpg"
         alt="user_avatar"
       />
       <div className="relative w-[60%]">
@@ -37,11 +36,6 @@ export default function UserInfo({ userData, activeEditingMode }) {
         <b>Fecha de Nacimiento</b>
         <br />
         <span className="text-xl">{userData.birthdate}</span>
-        <br />
-        <br />
-        <b>Libros guardados</b>
-        <br />
-        {booksSaved.length}
         <br />
         <br />
         <button className="primary-btn" onClick={activeEditingMode}>
