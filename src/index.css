@@ -30,11 +30,15 @@
   }
 
   .primary-btn {
-    @apply rounded bg-[#E50914] px-4 py-3 text-lg font-semibold text-[#f1f1f1] duration-150 hover:bg-[#be2c2c];
+    @apply f-center rounded bg-[#E50914] px-4 py-3 text-lg font-semibold text-[#f1f1f1] duration-150 hover:bg-[#be2c2c];
+  }
+
+  .primary-btn[disabled] {
+    @apply opacity-50;
   }
 
   .secondary-btn {
-    @apply rounded bg-[#f1f1f1] px-4 py-3 text-lg font-semibold text-[#141414] duration-150 hover:bg-[#e1e1e1];
+    @apply f-center rounded bg-[#f1f1f1] px-4 py-3 text-lg font-semibold text-[#141414] duration-150 hover:bg-[#e1e1e1];
   }
 
   .loader {
