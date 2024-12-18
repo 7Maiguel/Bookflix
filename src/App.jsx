@@ -24,13 +24,10 @@ export function App() {
 
   return (
     <GlobalContext.Provider value={{ isUserLoggedIn, setIsUserLoggedIn }}>
-      <BrowserRouter>
+      <BrowserRouter basename="Bookflix">
         <NavBar />
         <Routes>
-          <Route
-            path="/"
-            element={isUserLoggedIn ? <Home /> : <Login />}
-          ></Route>
+          <Route index element={isUserLoggedIn ? <Home /> : <Login />}></Route>
           <Route
             path="/generos"
             element={isUserLoggedIn ? <Genres /> : <Login />}
