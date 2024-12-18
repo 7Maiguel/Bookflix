@@ -6,42 +6,21 @@ import UserForm from "../components/user/UserForm";
 export default function Profile() {
   const [loading, setLoading] = useState(true);
   const [editingMode, setEditingMode] = useState(false);
-  const [user, setUser] = useState({
-    name: "",
-    lastName: "",
-    birthdate: "",
-    email: "",
-    picture: "",
-  });
+  const [user, setUser] = useState({});
 
   useEffect(() => {
-    // getUserData();
+    getUserData();
   }, []);
 
-  const getUserData = async function () {
-    const { data, error } = await supabase.from("users").select().eq("id", 4);
-
-    if (error) {
-      console.error("Error fetching user data:", error);
-      return;
-    }
-
-    if (data && data.length > 0) {
-      setUser({
-        name: data[0].name,
-        lastName: data[0].last_name,
-        birthdate: data[0].birthdate,
-        email: data[0].email,
-        picture: data[0].picture,
-      });
-
-      localStorage.setItem("user_id", data[0].id);
-      setTimeout(() => setLoading(false), 1000);
-    }
+  const getUserData = () => {
+    setTimeout(() => {
+      setUser(JSON.parse(localStorage.getItem("user")));
+      setLoading(false);
+    }, 1000);
   };
 
   return (
-    <>
+    <div className="page-container pt-[5.5rem]">
       <h2 className="title">Mi Perfil</h2>
       <div className="flex h-[320px] w-[55%]">
         {editingMode ? (
@@ -57,6 +36,6 @@ export default function Profile() {
         ) : null}
       </div>
       {loading && <SpinnerLoader />}
-    </>
+    </div>
   );
 }

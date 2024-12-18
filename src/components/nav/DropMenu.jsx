@@ -8,7 +8,6 @@ export default function DropMenu({ setDropMenuActive }) {
   const navigate = useNavigate();
 
   const signOut = () => {
-    localStorage.setItem("logged_in", JSON.stringify(false));
     setDropMenuActive(false);
     setIsUserLoggedIn(false);
     navigate("/login");
@@ -16,7 +15,7 @@ export default function DropMenu({ setDropMenuActive }) {
 
   return (
     <ul className="absolute right-10 top-[3.5rem] flex flex-col justify-between border-[1px] bg-[#060606]">
-      <li>
+      <li onClick={() => setDropMenuActive(false)}>
         <NavLink
           className={({ isActive }) =>
             `flex w-full items-center px-2 py-2 ${isActive ? "font-semibold" : ""}`
@@ -27,7 +26,7 @@ export default function DropMenu({ setDropMenuActive }) {
           Mi perfil
         </NavLink>
       </li>
-      <li>
+      <li onClick={() => setDropMenuActive(false)}>
         <NavLink
           className={({ isActive }) =>
             `flex w-full items-center px-2 ${isActive ? "font-semibold" : ""}`
