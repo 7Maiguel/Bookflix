@@ -37,6 +37,7 @@ export function App() {
             element={isUserLoggedIn ? <Profile /> : <Login />}
           ></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<Login />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>
