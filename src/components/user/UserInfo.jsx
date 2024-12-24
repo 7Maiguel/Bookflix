@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { censorString, joinName } from "../../utils/strings";
+import { censorString } from "../../utils/strings";
+import CustomIcon from "../common/CustomIcon";
 
 export default function UserInfo({ userData, activeEditingMode }) {
   const [censoringData, setCensoringData] = useState(true);
@@ -14,9 +15,7 @@ export default function UserInfo({ userData, activeEditingMode }) {
       <div className="relative w-[60%]">
         <b>Nombre Completo</b>
         <br />
-        <span className="text-xl">
-          {joinName(userData.name, userData.lastName)}
-        </span>
+        <span className="text-xl">{userData.fullName}</span>
         <br />
         <br />
         <b>Correo Electrónico</b>
@@ -25,23 +24,18 @@ export default function UserInfo({ userData, activeEditingMode }) {
           <span className="text-xl">
             {censoringData ? censorString(userData.email, 5) : userData.email}
           </span>
-          <span
-            className="material-symbols-outlined ml-2 cursor-pointer opacity-80"
-            onClick={() => setCensoringData(!censoringData)}
-          >
-            {censoringData ? "visibility" : "visibility_off"}
-          </span>
+          <CustomIcon
+            type={censoringData ? "eye" : "eyeOff"}
+            styles="cursor-pointer ml-2 text-xl"
+            handleClick={() => setCensoringData(!censoringData)}
+          />
         </div>
         <br />
-        <b>Fecha de Nacimiento</b>
         <br />
-        <span className="text-xl">{userData.birthdate}</span>
-        <br />
-        <br />
-        <button className="primary-btn" onClick={activeEditingMode}>
+        {/* <button className="primary-btn" onClick={activeEditingMode}>
           Editar Información
           <span className="material-symbols-outlined ml-2">edit</span>
-        </button>
+        </button> */}
       </div>
     </>
   );
