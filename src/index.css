@@ -11,8 +11,12 @@
     @apply bg-[#141414] text-[#f1f1f1];
   }
 
+  label {
+    @apply mb-2 inline-block font-semibold;
+  }
+
   input {
-    @apply mb-4 w-full border-b-2 p-3 font-sans text-xl outline-none focus:border-b-red-400;
+    @apply mb-3 w-full border-b-2 p-2 font-sans text-xl outline-none focus:border-b-red-400;
   }
 }
 
@@ -30,7 +34,7 @@
   }
 
   .primary-btn {
-    @apply f-center rounded bg-[#E50914] px-4 py-3 text-lg font-semibold text-[#f1f1f1] duration-150 hover:bg-[#be2c2c];
+    @apply f-center bg-[#E50914] px-4 py-3 text-lg font-semibold text-[#f1f1f1] duration-150 hover:bg-[#be2c2c];
   }
 
   .primary-btn[disabled] {
@@ -38,7 +42,11 @@
   }
 
   .secondary-btn {
-    @apply f-center rounded bg-[#f1f1f1] px-4 py-3 text-lg font-semibold text-[#141414] duration-150 hover:bg-[#e1e1e1];
+    @apply f-center bg-[#f1f1f1] px-4 py-3 text-lg font-semibold text-[#141414] duration-150 hover:bg-[#e1e1e1];
+  }
+
+  .password-input {
+    @apply m-0 w-[95%] bg-transparent focus:border-none border-none;
   }
 
   .loader {
