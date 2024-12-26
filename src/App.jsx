@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { GlobalContext } from "./contexts";
 import useLocalStorage from "./hooks/localstorage";
 import NavBar from "./components/nav/NavBar";
+import PageContainer from "./components/common/PageContainer";
+import BookList from "./components/books/BookList";
+import GenreList from "./components/genres/GenreList";
+import UserInfo from "./components/user/UserInfo";
 import NotFound from "./pages/NotFound";
-import Genres from "./pages/Genres";
-import Profile from "./pages/Profile";
-import Home from "./pages/Home";
 import Login from "./pages/Login";
 
 export function App() {
@@ -20,21 +21,46 @@ export function App() {
     setSessionLoggedIn(isUserLoggedIn);
   }, [isUserLoggedIn]);
 
-  useEffect(() => {});
-
   return (
     <GlobalContext.Provider value={{ isUserLoggedIn, setIsUserLoggedIn }}>
       <BrowserRouter basename="Bookflix">
         <NavBar />
         <Routes>
-          <Route index element={isUserLoggedIn ? <Home /> : <Login />}></Route>
+          <Route
+            index
+            element={
+              isUserLoggedIn ? (
+                <PageContainer title="Nuestra selección para ti">
+                  <BookList />
+                </PageContainer>
+              ) : (
+                <Login />
+              )
+            }
+          ></Route>
           <Route
             path="/generos"
-            element={isUserLoggedIn ? <Genres /> : <Login />}
+            element={
+              isUserLoggedIn ? (
+                <PageContainer title="Géneros">
+                  <GenreList />
+                </PageContainer>
+              ) : (
+                <Login />
+              )
+            }
           ></Route>
           <Route
             path="/perfil"
-            element={isUserLoggedIn ? <Profile /> : <Login />}
+            element={
+              isUserLoggedIn ? (
+                <PageContainer title="Mi Perfil">
+                  <UserInfo />
+                </PageContainer>
+              ) : (
+                <Login />
+              )
+            }
           ></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Login />}></Route>
