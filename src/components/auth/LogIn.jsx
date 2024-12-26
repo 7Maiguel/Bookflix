@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../contexts";
 import useLocalStorage from "../../hooks/localstorage";
+import PasswordInput from "../common/PasswordInput";
 
 export default function LogIn({ openSignUpForm }) {
   const [sessionUser] = useLocalStorage("user", null);
@@ -23,8 +24,8 @@ export default function LogIn({ openSignUpForm }) {
 
   return (
     <form className="mt-4" onSubmit={validateUserAuth}>
-      <input type="email" name="email" placeholder="Correo Electrónico" />
-      <input type="text" name="password" placeholder="Contraseña" required />
+      <input type="email" name="email" placeholder="Correo Electrónico" required />
+      <PasswordInput name="password" />
       <button
         type="submit"
         className="primary-btn my-2 w-full shadow-lg"

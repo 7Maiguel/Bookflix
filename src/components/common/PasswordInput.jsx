@@ -13,7 +13,7 @@ export default function PasswordInput({ label, name, onChange }) {
 
   return (
     <div>
-      <label htmlFor={name}>{label}</label>
+      {label && <label htmlFor={name}>{label}</label>}
       <div
         className={`mb-3 flex items-center justify-between border-b-2 bg-white pr-3 ${inputFocused ? "border-red-400" : ""}`}
       >
