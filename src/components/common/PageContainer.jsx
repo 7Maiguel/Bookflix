@@ -5,7 +5,7 @@ export default function PageContainer({ title, children }) {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoading(false), 500);
   }, [title]);
 
   return (

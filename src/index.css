@@ -26,7 +26,7 @@
   }
 
   .page-container {
-    @apply mx-auto h-[100vh] w-[91%];
+    @apply mx-auto h-[calc(100vh-60px)] w-[91%];
   }
 
   .title {
