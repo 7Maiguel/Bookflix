@@ -14,7 +14,7 @@ export default function DropMenu({ setDropMenuActive }) {
   };
 
   return (
-    <ul className="absolute right-10 top-[3.5rem] flex flex-col justify-between border-[1px] bg-[#060606] h-[15vh]">
+    <ul className="absolute right-10 top-[3.5rem] flex flex-col justify-between border-[1px] bg-[#060606] h-[15vh] px-1">
       <li onClick={() => setDropMenuActive(false)}>
         <NavLink
           className={({ isActive }) =>
