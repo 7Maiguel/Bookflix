@@ -9,6 +9,7 @@ import GenreList from "./components/genres/GenreList";
 import UserInfo from "./components/user/UserInfo";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
+import SavedBooksList from "./components/books/SavedBooksList";
 
 export function App() {
   const [sessionLoggedIn, setSessionLoggedIn] = useLocalStorage(
@@ -56,6 +57,18 @@ export function App() {
               isUserLoggedIn ? (
                 <PageContainer title="Mi Perfil">
                   <UserInfo />
+                </PageContainer>
+              ) : (
+                <Login />
+              )
+            }
+          ></Route>
+          <Route
+            path="/guardados"
+            element={
+              isUserLoggedIn ? (
+                <PageContainer title="Guardados">
+                  <SavedBooksList />
                 </PageContainer>
               ) : (
                 <Login />
